@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #686663;
+    color: rgb(255, 255, 255);
+}
+header{
+    position:fixed;
+    height: 15px;
+    width: 120%;
+    z-index: 1050;
+    top:0% ;
+}
+h1{
+    font-size: 60px;
+    position: relative;
+    background-color: rgb(50, 49, 48);
+    background-image: url(images/LOGO3.jpg);
+    background-repeat:no-repeat;
+    background-size: 15vh;
+    background-position: 2%;
+    color: rgb(255, 255, 255);
+    text-indent: 140px;
+}
+ul{
+    position: fixed;
+    top: 45%;
+    left: 7.5%;
+    font-size: 1.5em;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+ul li {
+    list-style: none;
+    transition: .5s;
+    padding: 30px;
+}
+ul li a{
+    position: relative;
+    display: block;
+    text-align:left;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px 25px;
+    color: #ffffff;
+    border-bottom:1px solid ;
+}
+ul:hover li{
+    opacity: .2;
+    filter: blur(0.5px);
+}
+ul li:hover{
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* 推薦書 */
+.books{
+    height: 110vh;
+}
+.books h2{
+    font-size: 70px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 14%;
+    left: 40%;
+    z-index: 1020;
+    text-transform: uppercase;
+}
+.books h2:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    white-space: nowrap;
+    margin: 0 20px;
+    color: #000000;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.books h2:hover:before{
+    width: 100%;
+}
+.books h2:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b7b7b7;
+    border-radius: 15px;
+    transition: 0.5s;
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+    transform-origin: right;
+    z-index: -1;
+}
+.books h2:hover:after{
+    width: 100%;
+    transform: scaleX(1);
+}
+.books img{
+    width: 900px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+.morebooks1 img,.morebooks2 img,.morebooks3 img{
+    width: 250px;
+    border-radius: 8px;
+}
+.morebooks1,.morebooks2,.morebooks3{
+    width: 130vh;
+    display: flex;
+    justify-content: space-between;
+    text-align:center;
+    position: relative;
+    left: 25%;
+    margin-bottom: 30px;
+}
+.morebooks1 h3,.morebooks2 h3,.morebooks3 h3{
+    font-size: 25px;
+}
+.dl,.dt,.dd{
+    letter-spacing: 0.3em;
+    border: 1px solid;
+    margin-left: 1em;
+}
+.dl{
+    padding: 2em;
+}
+.dt{
+    padding: 1.6em;
+    padding-top: 1.5em;
+}
+.dd{
+    padding: 3.8em;
+    padding-top: 1.5em;
+}
+.b1{
+    position: absolute;
+    top: 90%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+}
+.b2{
+    position: absolute;
+    top: 87%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+}
+.b3{
+    position: absolute;
+    top: 76%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+}
+.b1b,.b2b,.b3b,.b1b:focus,.b2b:focus,.b3b:focus{
+    min-width: 250px;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.75, 0, 0.25, 1);
+    background-color: #484641;
+    color: azure;
+    padding: 5px 45px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.b1b::before,.b2b::before,.b3b::before,.b1b::after,.b2b::after,.b3b::after{
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+.b1b:before,.b2b:before,.b3b:before{
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 2px solid #000000;
+    border-left: 0;
+    border-right: 0;
+}
+.b1b:after,.b2b:after,.b3b:after{
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: #403e3a;
+}
+.b1b:hover,.b2b:hover,.b3b:hover{
+    color: #ffffff;
+    transition-delay: .5s;
+}
+.b1b:hover:before,.b2b:hover:before,.b3b:hover:before{
+    transition-delay: 0s;
+    left: 0;
+    width: 100%;    
+}
+.b1b:hover:after,.b2b:hover:after,.b3b:hover:after{
+    background: #292825;
+    transition-delay: .35s;
+    top:0;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

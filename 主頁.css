@@ -1,0 +1,476 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Serif TC", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+/* 導覽列 */
+header{
+    background-color:#32394b;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+header ul{
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    line-height: 50px;
+}
+header li{
+    display:inline;
+    margin-right: 5vw;
+}
+h1{
+    color:hsl(0, 0%, 100%);
+    position: absolute;
+    left:120px;
+    top: 0;
+    line-height: 80px;
+    background-image: url(images/LOGO.png);
+    background-repeat: no-repeat;
+    background-position:90px;
+    width: 200px;
+    background-size: 50%;
+    text-indent: -99px;
+}
+header a{
+    color: #f0f8ff;
+    font-size:20px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all .3s linear;
+    padding: 5px;
+}
+header a:hover{
+    color: #f0f8ff;
+    width: 150px 200px;
+    transform: scale(1.2);
+    border-radius: 20px;
+    color: black;
+    background-color:#7b7c90;
+}
+/* slogan區塊 */
+.new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9ecec;
+    color: rgb(255, 255, 255);
+    height:90vh;
+    background-image: url(images/coffee\ shop3.jpg);
+    background-repeat:no-repeat;
+    background-position:top;
+    background-size:100% 100%;
+}
+.new h2{
+    font-size: 75px;
+    background-color: rgba(114, 107, 90, 0.7);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.new p{
+    position: relative;
+    width: 150vh;
+    text-align: center;
+    color:aliceblue;
+    background-color: rgba(114, 107, 90, 0.7);
+    border-radius: 5px;
+    padding: 0.5em;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* solgan區 更多介紹按鈕 */
+.morenews{
+    position: absolute;
+    left: 42%;
+    top: 70%;
+    min-width: 300px;
+    background: #645c52;
+    border: 1px solid #645c52;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.morenews span {
+    position: relative;
+    z-index: 100;
+}
+.morenews:before,.morenews:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.morenews:before {
+    transform: translate3d(-100%, 0, 0);
+    background-color: #423932;
+    transition: transform 300ms cubic-bezier(0.5, 0.055, 0.675, 0.19);
+}
+.morenews:after {
+    background-color: #372f21;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 300ms 300ms cubic-bezier(0.16, 0.73, 0.58, 0.62);
+}
+.morenews:hover:before {
+    transform: translate3d(0, 0, 0);
+}
+.morenews:hover:after {
+    transform: translate3d(0, 0, 0);
+}
+/*二手書籍區 */
+.book{
+    background-color:#56462c;
+    color: #ffffff;
+    height:20vh;
+}
+.book h2{
+    font-size:60px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+.book h3{
+    font-size: 1.7em;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+}
+.books{
+    background-color:#56462c;
+    color: #ffffff;
+    height:85vh;
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: space-between;
+    padding: 100px;
+}
+.books img{
+    width: 350px;
+    border-radius: 20px;
+}
+.books h3{
+    font-size: 19px;
+    border-style:solid;
+    border-color: #a99980;
+    margin-top: 1em;
+    padding: 5px;
+    text-align: center;
+}
+.books p{
+    font-size:20px;
+    margin: 3vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.p1,.p2{
+    position: relative;
+    left: 10%;
+}
+/* 二手區按鈕們 */
+.twohands,.newbooks,.donate{
+    position: relative;
+    min-width: 150px;
+    background: transparent;
+    border: none;
+    border-radius:50%;
+    font-size: 1.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+/* 二手書單按鈕 */
+.twohands span{
+    color: #FFFFFF;
+    mix-blend-mode:lighten;
+}
+.twohands:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    border-radius: 50px;
+    background: #2d2416;
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.twohands:hover:before {
+    background: #a08f6d;
+    width: 100%;
+}
+/* 新書區按鈕 */
+.newbooks span{
+    color: #FFFFFF;
+    mix-blend-mode:lighten;
+}
+.newbooks:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    border-radius: 50px;
+    background: #2d2416;
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.newbooks:hover:before {
+    background: rgb(160, 143, 109);
+    width: 100%;
+  }
+  /* 捐贈按鈕 */
+.donate span{
+    color: #FFFFFF;
+    mix-blend-mode:lighten;
+}
+.donate:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    border-radius: 50px;
+    background: #2d2416;
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.donate:hover:before {
+    background: rgb(160, 143, 109);
+    width: 100%;
+}
+/* 讀書bar(1) */
+.booking{ 
+    height:35vh;
+    background-color:#858371;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:first baseline;
+}
+.booking h3{
+    font-size: 70px;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.booking h4{
+    font-size: 35px;
+}
+.booking h5{
+    font-size:25px;
+}
+/* 讀書bar(2) */
+.booking2{
+    height:70vh;
+    background-color:#858371;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+.booking2 img{
+    width:700px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+.booking2 p{
+    font-size: 25px;
+    margin-left:2em 
+}
+/* 讀書bar訂位按鈕 */
+.booked,.booked:focus {		
+    display: block;
+    position: relative;
+    z-index: 1;
+    min-width: 300px;
+    background-color: #bfbaac;
+    color: #2d2416;
+    font-size: 30px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.75, 0, 0.25, 1);
+    padding: 10px 10px;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.booked:before,.booked:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+.booked:hover {
+    color: #ffffff;
+    transition-delay: .5s;
+}
+.booked:hover:before {
+    transition-delay: 0s;
+}
+.booked:hover:after {
+    background: #483f2f;
+    transition-delay: .35s;
+}
+.booked:before{
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 2px solid #483f2f;
+    border-left: 0;
+    border-right: 0;
+}
+.booked:after{
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: rgb(120, 107, 84);
+}
+.booked:hover:before{
+    left: 0;
+    width: 100%;
+}
+.booked:hover:after{
+    top:0;
+    height: 100%;
+}
+/* 尾頁 */
+footer{
+    background-color:#45433e;
+    color: #ffffff;
+    height:20vh;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.server h3{
+    font-size:25px;
+    margin-bottom:10px;
+}
+.server input,.server button{
+    background-color: #bfbaac;
+    color: black;
+    border: 2px solid #37230a;
+    padding:5px;
+    border-radius:5px;
+}
+.server input{
+    width: 280px;
+    margin-right: 10px;
+    margin-left:150px;
+}
+input:focus{
+    outline: none;
+}
+.meau{
+    display: none;
+}
+/* 響應式設計語法 */
+@media screen and (max-width: 768px){
+    header ul{
+        display: none;
+    }
+    header h1{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .new h2{
+        font-size: 35px;
+    }
+    .new p{
+        font-size: 20px;
+    }
+    .morenews{
+        position: absolute;
+        left: 25%;
+        top: 60%;
+        min-width: 300px;
+        font-size: 1.5em;
+    }
+    .book h2{
+        font-size: 50px;
+    }
+    .book h3{
+        font-size: 1.2em;
+    }
+    .books img{
+        width: 200px;
+    }
+    .meau{
+        display: block;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 40px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    .drinks{
+        flex-direction: column;
+
+    }
+    .drinks img{
+        width: 100%;
+    }
+    .words{
+        width: 100%;
+        padding: 40px 0;
+    }
+    .words p{
+        font-size: 17px;
+    }
+    .words h2{
+        font-size: 30px;
+    }
+    .products{
+        flex-direction: column;
+        padding: 60px 0;
+        
+    }
+    .products div{
+        margin-bottom: 30px;
+        margin-left: 10vh;
+        margin-right: 10vh;
+    }
+    .booking{
+        background-size: 40px;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    }
+    .booking h3{
+        font-size: 45px;
+    }
+    .booking h4{
+        font-size: 20px;
+    }
+}
